@@ -3,11 +3,25 @@
 <head>
     <title>Wave Height Prediction</title>
     <link rel="stylesheet" href="/static/style.css">
+    <!-- Simple chart library for plotting recent values + prediction -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>🌊 Wave Height Prediction</h1>
     <button onclick="predict()">Predict</button>
     <h2 id="result"></h2>
+
+    <!-- Container for the list of recent values -->
+    <div id="recent-container">
+        <h3>Last 10 Wave Heights Used</h3>
+        <ul id="recent-list"></ul>
+    </div>
+
+    <!-- Canvas for the wave height chart -->
+    <div id="chart-container">
+        <h3>Recent Wave Heights and Predicted Next</h3>
+        <canvas id="waveChart"></canvas>
+    </div>
 
     <script src="/static/script.js"></script>
 </body>
